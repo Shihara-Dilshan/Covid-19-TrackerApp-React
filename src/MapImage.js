@@ -1,29 +1,28 @@
-import React , { Component } from 'react';
+import React, { Component } from "react";
 
 import "materialize-css/dist/css/materialize.min.css";
 
-class MapImage extends Component{
-    constructor(){
-        super();
-        this.state = {};
-    }
+class MapImage extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
 
-    getStyle = () => {
-        return{
-            backgroundColor: "red",
-            borderRadius: "1px",
-        }
-    }
-
-    render(){
-        return(
-            <div className="cntainer" style={this.getStyle()}>
-                <div className="row">
-                    <div className="col s12">dsdsd</div>
-                </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div class="video-container">
+        <iframe
+          title="video introduction"
+          width="auto"
+          height="auto"
+          src="https://www.youtube.com/embed/Ma07a6svw5w"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen="true"
+        ></iframe>
+      </div>
+    );
+  }
 }
 
 export default MapImage;

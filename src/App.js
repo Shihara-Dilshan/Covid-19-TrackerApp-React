@@ -5,6 +5,7 @@ import M from "materialize-css";
 
 import Navbar from "./Navbar";
 import Card from "./Card";
+import MapImage from "./MapImage";
 
 class App extends Component {
   constructor() {
@@ -13,7 +14,7 @@ class App extends Component {
       countries: [],
       country: "worldwide",
       countryInfo: {},
-      tableData: []
+      tableData: [],
     };
   }
 
@@ -41,7 +42,6 @@ class App extends Component {
     });
     this.setState({ tableData: table });
     this.setState({ countries: countries });
-    
 
     var elems = document.querySelectorAll("select");
     M.FormSelect.init(elems);
@@ -74,10 +74,8 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar />
-	<br />
+        <br />
         <div className="row">
-          
-
           <div className="col s12 m8 l9">
             <select name="" id="" onChange={this.getCountry}>
               <option value="worldwide">World Wide</option>
@@ -109,8 +107,10 @@ class App extends Component {
                 total={this.state.countryInfo.deaths}
               />
             </div>
-            
+              <MapImage />
           </div>
+
+          
 
           <div className="col s12 m4 l3">
             <h5 className="center">Live cases</h5>
@@ -125,7 +125,7 @@ class App extends Component {
                         return 1;
                       }
                     })
-                    .slice(0, 15),
+                    .slice(0, 17),
                 ].map((country, index) => {
                   return (
                     <tr key={index}>
@@ -136,7 +136,9 @@ class App extends Component {
                 })}
               </tbody>
             </table>
+            
           </div>
+         
         </div>
       </React.Fragment>
     );

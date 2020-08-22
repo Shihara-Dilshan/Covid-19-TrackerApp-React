@@ -124,7 +124,7 @@ class App extends Component {
                         return 1;
                       }
                     })
-                    .slice(0, 17),
+                    .slice(0, 15),
                 ].map((country, index) => {
                   return (
                     <tr key={index}>

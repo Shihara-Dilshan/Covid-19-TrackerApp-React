@@ -13,8 +13,8 @@ class Navbar extends Component {
       <React.Fragment>
         <nav>
           <div className="nav-wrapper teal">
-            <a href="#!" className="brand-logo hide-on-med-only">
-              COVID-19 Tracker
+            <a href="#!" className="brand-logo">
+              COVID-19
             </a>
           </div>
         </nav>

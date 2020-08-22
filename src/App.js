@@ -66,7 +66,6 @@ class App extends Component {
 
       this.setState({ countryInfo: result });
 
-      console.log(result);
     }
   };
 

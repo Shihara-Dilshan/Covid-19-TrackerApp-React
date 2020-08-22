@@ -8,6 +8,12 @@ class MapImage extends Component {
     this.state = {};
   }
 
+  async componentDidMount(){
+    const getDetails= await fetch('https://www.disease.sh/v3/covid-19/historical/all');
+    const result = await getDetails.json();
+    console.log(result);
+  }
+
   render() {
     return (
       <div class="video-container">
